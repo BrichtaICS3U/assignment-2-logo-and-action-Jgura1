@@ -1,19 +1,20 @@
 # ICS3U
 # Assignment 2: Logo
-# <your name>
+# Jesse
 
 # adapted from http://www.101computing.net/getting-started-with-pygame/
 
 # Import the pygame library and initialise the game engine
 import pygame
 pygame.init()
+Font = pygame.font.SysFont('magnificent', 80)
 
 # Define some colours
 # Colours are defined using RGB values
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-GREEN = (0, 255, 0)
-RED = (255, 0, 0)
+GREY = (192, 192, 192)
+SILVER = (205, 208, 215)
 
 # Set the screen size (please don't change this)
 SCREENWIDTH = 400
@@ -44,12 +45,15 @@ while carryOn:
     # --- Draw code goes here
 
     # Clear the screen to white
-    screen.fill(WHITE)
+    screen.fill(BLACK)
 
     # Queue different shapes and lines to be drawn
-    # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
-    # pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
-    # pygame.draw.ellipse(screen, BLACK, [20, 20, 250, 100], 2)
+    pygame.draw.ellipse(screen, SILVER, [50, 110, 300, 160], 18)
+    pygame.draw.ellipse(screen, SILVER, [87, 114, 220, 70], 18)
+    pygame.draw.ellipse(screen, SILVER, [167,135,60, 115],16)
+
+    text = Font.render('TOYOTA', 1, (SILVER))
+    screen.blit(text,(90, 295))
 
     # Update the screen with queued shapes
     pygame.display.flip()
