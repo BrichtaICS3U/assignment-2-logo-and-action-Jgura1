@@ -48,9 +48,9 @@ while carryOn:
     screen.fill(BLACK)
 
     # Queue different shapes and lines to be drawn
-    pygame.draw.ellipse(screen, SILVER, [50, 110, 300, 160], 18)
-    pygame.draw.ellipse(screen, SILVER, [87, 114, 220, 70], 18)
-    pygame.draw.ellipse(screen, SILVER, [167,135,60, 115],16)
+    pygame.draw.ellipse(screen, SILVER, [50, 100, 300, 160], 18)
+    pygame.draw.ellipse(screen, SILVER, [87, 104, 220, 70], 18)
+    pygame.draw.ellipse(screen, SILVER, [167,125,60, 115],16)
 
     text = Font.render('TOYOTA', 1, (SILVER))
     screen.blit(text,(90, 295))
