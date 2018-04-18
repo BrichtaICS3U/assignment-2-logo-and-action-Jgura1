@@ -15,16 +15,16 @@ class Ball(pygame.sprite.Sprite):
         self.color = color
         self.speed = speed
 
-        pygame.draw.rect(self.image, self.color,[o,o, self.width, self.height])
+        pygame.draw.ellipse(self.image, self.color,[0,0, self.width, self.height])
 
         self.rect = self.image.get_rect()
 
-        def moveDown(self, speed):
-            self.rect.y += self.speed* speed / 20
+    def moveDown(self, speed):
+        self.rect.y += self.speed* speed / 20
 
-        def repaint(self, color):
-            self.color = color
-            pygame.draw.rect(self.image, self.color, [0,0, self.width, self.height])
+    def repaint(self, color):
+        self.color = color
+        #pygame.draw.ellipse(self.image, self.color, [0,0, self.width, self.height])
             
         
 

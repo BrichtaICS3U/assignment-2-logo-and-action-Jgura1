@@ -27,7 +27,7 @@ class Ball(pygame.sprite.Sprite):
 
     def repaint(self, color):
         self.color = color
-        pygame.draw.rect(self.image, self.color, [0,0, self.width, self.height])
+        pygame.draw.ellipse(self.image, self.color, [0,0, self.width, self.height])
             
         
 
